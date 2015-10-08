@@ -1,0 +1,19 @@
+{
+  "name": "gulp_polymer",
+  "version": "1.0.0",
+  "description": "Small presentation about Gulp and Polymer as part of the CS Games ULaval seminars",
+  "author": "Ian Létourneau <letourneau.ian@gmail.com>",
+  "repository": "https://github.com/ianlet/gulp-poly-seminar",
+  "license": "MIT",
+  "private": true,
+
+  "dependencies": {},
+
+  "devDependencies": {
+    "browser-sync": "^2.9.8",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  },
+
+  "scripts": {}
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CS Games ULaval Seminars - Gulp & Polymer | Ian Létourneau</title>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="routing.html">
+
+    <link rel="import" href="elements/elements.html">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<template is="dom-bind" id="app">
+    <iron-a11y-keys keys="shift+space left pagedown down" target="[[target]]" on-keys-pressed="previous"></iron-a11y-keys>
+    <iron-a11y-keys keys="space right pageup up" target="[[target]]" on-keys-pressed="next"></iron-a11y-keys>
+
+    <div id="container">
+        <neon-animated-pages attr-for-selected="data-route" selected="[[route]]" entry-animation="[[entryAnimation]]" exit-animation="[[exitAnimation]]">
+            <neon-animatable data-route="home" id="home">
+                <img id="gulpIcon" src="images/gulp-white.svg">
+                <img id="polymerIcon" src="images/polymer.svg"/>
+            </neon-animatable>
+            <neon-animatable data-route="gulp" id="gulpHome" class="slide">
+                <paper-material elevation="5">
+                    <img src="images/gulp.svg"/>
+                    <ul>
+                        <li>NodeJs Module</li>
+                        <li>Task automation tool</li>
+                    </ul>
+                </paper-material>
+            </neon-animatable>
+            <neon-animatable data-route="gulp-stream" id="gulpStream" class="slide">
+                <paper-material elevation="5">
+                    <img src="images/streams.jpg"/>
+                </paper-material>
+            </neon-animatable>
+            <neon-animatable data-route="gulp-pipe" id="gulpPipe" class="slide">
+                <paper-material elevation="5">
+                    <h1>Pipeline</h1>
+                    <ul>
+                        <li>
+                            Linux <br>
+                            <code>
+                                $ bunzip2 -c potato_archive.tar.bz2 | tar -xf
+                            </code>
+                        </li>
+                        <li>
+                            Gulp <br>
+                            <code>
+                                gulp.src('style.scss').pipe(sass()).pipe(gulp.dest('dst'));
+                            </code>
+                        </li>
+                    </ul>
+                </paper-material>
+            </neon-animatable>
+            <neon-animatable data-route="polymer" id="polymer" class="slide">
+                <paper-material elevation="5">
+                    <img src="images/polymer-gray.svg"/>
+                    <ul>
+                        <li>Web Components</li>
+                        <li>JS Library</li>
+                    </ul>
+                </paper-material>
+            </neon-animatable>
+            <neon-animatable data-route="polymer-elements" id="polymerElements" class="slide">
+                <paper-material elevation="5">
+                    <h1>Polymer Elements</h1>
+
+                    <div class="polymer-elements">
+                        <polymer-element id="ironElements" title="Fe" name="Iron Elements"
+                                         description="Polymer core elements"></polymer-element>
+                        <polymer-element id="paperElements" title="Md" name="Paper Elements"
+                                         description="Material design elements"></polymer-element>
+                        <polymer-element id="googleElements" title="Go" name="Google Web Components"
+                                         description="Components for Google's APIs and services"></polymer-element>
+                        <polymer-element id="goldElements" title="Au" name="Gold Elements"
+                                         description="Ecommerce Elements"></polymer-element>
+                        <polymer-element id="neonElements" title="Ne" name="Neon Elements"
+                                         description="Animation and special effects"></polymer-element>
+                        <polymer-element id="platinumElements" title="Pt" name="Platinum Elements"
+                                         description="Offline, push and more"></polymer-element>
+                    </div>
+                </paper-material>
+            </neon-animatable>
+            <neon-animatable data-route="lets-build" id="letsBuild" class="slide">
+                <paper-material elevation="5">
+                    <h1>Enough talking...<br>Let's build something!</h1>
+                </paper-material>
+            </neon-animatable>
+        </neon-animated-pages>
+    </div>
+</template>
+<script src="scripts/app.js"></script>
+</body>
+</html>

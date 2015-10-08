@@ -1,0 +1,96 @@
+<script src="bower_components/page/page.js"></script>
+<script>
+  window.addEventListener('WebComponentsReady', function() {
+    page('/', function() {
+        app.route = 'home';
+        app.previousPage = '/';
+        app.nextPage = '/gulp';
+
+        app.nextEntryAnimation = 'slide-from-up-animation';
+        app.nextExitAnimation = 'slide-down-animation';
+        app.previousEntryAnimation = 'slide-from-down-animation';
+        app.previousExitAnimation = 'slide-up-animation';
+    });
+
+    page('/gulp', function() {
+        app.route = 'gulp';
+        app.previousPage = '/';
+        app.nextPage = '/gulp-stream';
+
+        app.nextEntryAnimation = 'slide-from-up-animation';
+        app.nextExitAnimation = 'slide-down-animation';
+        app.previousEntryAnimation = 'slide-from-down-animation';
+        app.previousExitAnimation = 'slide-up-animation';
+    });
+
+    page('/gulp-stream', function() {
+        app.route = 'gulp-stream';
+        app.previousPage = '/gulp';
+        app.nextPage = '/gulp-pipe';
+
+        app.nextEntryAnimation = 'slide-from-up-animation';
+        app.nextExitAnimation = 'slide-down-animation';
+        app.previousEntryAnimation = 'slide-from-down-animation';
+        app.previousExitAnimation = 'slide-up-animation';
+    });
+
+      page('/gulp-pipe', function () {
+          app.route = 'gulp-pipe';
+          app.previousPage = '/gulp-stream';
+          app.nextPage = '/gulp-end';
+
+          app.nextEntryAnimation = 'slide-from-right-animation';
+          app.nextExitAnimation = 'slide-left-animation';
+          app.previousEntryAnimation = 'slide-from-down-animation';
+          app.previousExitAnimation = 'slide-up-animation';
+      });
+
+      page('/gulp-end', function () {
+          app.route = 'home';
+          app.previousPage = '/gulp-pipe';
+          app.nextPage = '/polymer';
+
+          app.nextEntryAnimation = 'slide-from-right-animation';
+          app.nextExitAnimation = 'slide-left-animation';
+          app.previousEntryAnimation = 'slide-from-left-animation';
+          app.previousExitAnimation = 'slide-right-animation';
+      });
+
+      page('/polymer', function () {
+          app.route = 'polymer';
+          app.previousPage = '/gulp-end';
+          app.nextPage = '/polymer-elements';
+
+          app.nextEntryAnimation = 'slide-from-right-animation';
+          app.nextExitAnimation = 'slide-left-animation';
+          app.previousEntryAnimation = 'slide-from-left-animation';
+          app.previousExitAnimation = 'slide-right-animation';
+      });
+
+      page('/polymer-elements', function () {
+          app.route = 'polymer-elements';
+          app.previousPage = '/polymer';
+          app.nextPage = '/lets-build';
+
+          app.nextEntryAnimation = 'slide-from-right-animation';
+          app.nextExitAnimation = 'slide-left-animation';
+          app.previousEntryAnimation = 'slide-from-left-animation';
+          app.previousExitAnimation = 'slide-right-animation';
+      });
+
+      page('/lets-build', function () {
+          app.route = 'lets-build';
+          app.previousPage = '/polymer-elements';
+          app.nextPage = '/lets-build';
+
+          app.nextEntryAnimation = 'slide-from-right-animation';
+          app.nextExitAnimation = 'slide-left-animation';
+          app.previousEntryAnimation = 'slide-from-left-animation';
+          app.previousExitAnimation = 'slide-right-animation';
+      });
+
+    page({
+        hashbang: true 
+    });
+  });
+</script>
