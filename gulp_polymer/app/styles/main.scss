@@ -1,0 +1,268 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Mono';
+  font-size: 28px;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+}
+
+neon-animated-pages {
+  &, neon-animatable {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  > neon-animatable {
+    padding: 64px;
+
+    background: top left no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+paper-material {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 32px;
+
+  background: white;
+
+  border-radius: 2px;
+}
+
+.content {
+  display: table-cell;
+
+  height: 100%;
+  width: 100%;
+
+  vertical-align: middle;
+  text-align: center;
+}
+
+.slide {
+  paper-material {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+
+    font-size: 38px;
+  }
+
+  ul {
+    margin: 0;
+    margin-top: 18px;
+    padding: 0;
+
+    li {
+      margin: 12px 0;
+
+      font-family: 'Roboto Mono', serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  code {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+
+#home {
+  position: relative;
+
+  padding: 0;
+
+  background-image: url('../images/background.svg');
+
+  #gulpIcon {
+    position: absolute;
+    top: calc(30vh - 6vh);
+    left: calc(27vw - 15vw);
+
+    width: 30vw;
+    max-height: 12vw;
+  }
+
+  #polymerIcon {
+    position: absolute;
+    bottom: calc(32vh - 9vh);
+    right: calc(27vw - 22vw);
+
+    width: 44vw;
+    max-height: 18vh;
+  }
+}
+
+#gulpHome {
+  background-image: url("../images/background-gulp-home.svg");
+
+  img {
+    height: 25vh;
+  }
+}
+
+#gulpStream {
+  background-image: url("../images/background-gulp-stream.svg");
+
+  img {
+    height: 90%;
+  }
+}
+
+#gulpPipe {
+  background-image: url("../images/background-gulp-pipe.svg");
+}
+
+#polymer {
+  background-image: url("../images/background-polymer.svg");
+
+  img {
+    height: 86px;
+    max-height: 15vh;
+  }
+}
+
+#polymerElements {
+  background-image: url("../images/background-polymer-elements.svg");
+}
+
+.polymer-elements {
+  display: flex;
+
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#ironElements {
+  background-color: #81C784;
+}
+
+#paperElements {
+  background-color: #FFAB91;
+}
+
+#googleElements {
+  background-color: #64B5F6;
+}
+
+#goldElements {
+  background-color: #FFB74D;
+}
+
+#neonElements {
+  background-color: #A7FFEB;
+}
+
+#platinumElements {
+  background-color: #CFD8DC;
+}
+
+#letsBuild {
+  background-image: url("../images/background-lets-build.svg");
+}
+
+/* Breakpoints */
+/* Small */
+@media (max-width: 600px) {
+}
+
+/* Tablet+ */
+@media (min-width: 601px) {
+}
+
+/* mobile-small */
+@media all and (min-width: 0) and (max-width: 360px) and (orientation: portrait) {
+}
+
+/* mobile-large */
+@media all and (min-width: 361px) and (orientation: portrait) {
+}
+
+/* mobile-small-landscape */
+@media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) {
+}
+
+/* mobile-large-landscape */
+@media all and (min-width: 481px) and (orientation: landscape) {
+}
+
+/* tablet-small-landscape */
+@media all and (min-width: 600px) and (max-width: 960px) and (orientation: landscape) {
+}
+
+/* tablet-large-landscape */
+@media all and (min-width: 961px) and (orientation: landscape) {
+}
+
+/* tablet-small */
+@media all and (min-width: 600px) and (orientation: portrait) {
+}
+
+/* tablet-large */
+@media all and (min-width: 601px) and (max-width: 840px) and (orientation: portrait) {
+}
+
+/* desktop-x-small-landscape */
+@media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) {
+}
+
+/* desktop-x-small */
+@media all and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4/3) {
+}
+
+/* desktop-small-landscape */
+@media all and (min-width: 481px) and (max-width: 840px) and (orientation: landscape) {
+}
+
+/* desktop-small */
+@media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) {
+}
+
+/* desktop-medium-landscape */
+@media all and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
+}
+
+/* desktop-medium */
+@media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) {
+}
+
+/* desktop-large */
+@media all and (min-width: 1281px) and (max-width: 1600px) {
+}
+
+/* desktop-xlarge */
+@media all and (min-width: 1601px) and (max-width: 1920px) {
+}

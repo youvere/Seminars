@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+     viewBox="0 0 1024 1024" preserveAspectRatio="none">
+
+    <defs>
+        <filter id="elevation-1" x="0" y="0" width="200%" height="200%">
+            <feOffset result="offOut" in="SourceAlpha" dx="0" dy="0"/>
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="4"/>
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <rect fill="#CF1D1D" stroke="none" x="0" y="0" width="1024" height="1024"/>
+        <polygon fill="#CF4646" stroke="none" points="-1,-1 309,-1 824,1024 -1,1024 -1,824 400,624"
+                 filter="url(#elevation-1)"/>
+        <polygon fill="#CF4646" stroke="none" points="609,-1 1024,1024 1024,-1" filter="url(#elevation-1)"/>
+    </g>
+</svg>
