@@ -1,3 +1,3 @@
 # Seminars
 
-Presentations of different subjects at ULaval for the CS Games. 
+Presentations on various topics at ULaval for the CS Games. 
